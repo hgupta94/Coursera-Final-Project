@@ -56,7 +56,7 @@ mod2 <- ames_train %>%
 
 summary(mod2)
 
-#compare model selection methods
+#compare variable selection methods
 mod2.bas <- bas.lm(log(price) ~ log(Lot.Area) + Neighborhood + Overall.Cond + Overall.Qual + Year.Built + Bedroom.AbvGr + Sale.Condition, data = ames_train, prior = "AIC", modelprior = uniform())
 summary(mod2.bas)
 coefficients(mod2.bas)
